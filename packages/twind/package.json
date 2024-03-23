@@ -1,0 +1,43 @@
+{
+  "name": "twind",
+  "version": "1.0.1",
+  "description": "Proxy package for @twind/core",
+  "keywords": [
+    "twind",
+    "tailwind",
+    "tailwindcss",
+    "tw-in-js",
+    "tailwind-in-js"
+  ],
+  "type": "module",
+  "// The 'module', 'unpkg' and 'types' fields are added by distilt": "",
+  "main": "src/index.ts",
+  "// Each entry is expanded into several bundles (types, esnext, module, script, node, and default)": "",
+  "exports": {
+    ".": "./src/index.ts",
+    "./package.json": "./package.json"
+  },
+  "// These are relative from within the dist/ folder": "",
+  "sideEffects": false,
+  "dependencies": {
+    "@twind/core": "^1.0.1"
+  },
+  "peerDependencies": {
+    "typescript": "^4.8.4"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "typescript": "^4.8.4"
+  },
+  "scripts": {
+    "build": "distilt"
+  },
+  "publishConfig": {
+    "access": "public",
+    "directory": "dist"
+  }
+}

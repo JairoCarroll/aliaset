@@ -1,0 +1,34 @@
+{
+  "name": "@example/playground",
+  "description": "playground with all presets enabled",
+  "version": "1.0.1",
+  "private": true,
+  "main": "index.js",
+  "license": "MIT",
+  "bugs": "https://github.com/tw-in-js/twind/issues",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tw-in-js/twind.git",
+    "directory": "examples/playground"
+  },
+  "engines": {
+    "node": ">=14"
+  },
+  "type": "module",
+  "scripts": {
+    "start": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@twind/core": "1.0.1",
+    "@twind/preset-autoprefix": "1.0.1",
+    "@twind/preset-ext": "1.0.1",
+    "@twind/preset-line-clamp": "1.0.1",
+    "@twind/preset-tailwind": "1.0.1",
+    "@twind/preset-tailwind-forms": "1.0.1"
+  },
+  "devDependencies": {
+    "vite": "^3.2.3"
+  }
+}

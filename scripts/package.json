@@ -1,0 +1,12 @@
+{
+  "name": "scripts",
+  "version": "1.0.0-next.39",
+  "private": true,
+  "scripts": {
+    "sponsors": "sponsorkit"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "sponsorkit": "^0.6.1"
+  }
+}

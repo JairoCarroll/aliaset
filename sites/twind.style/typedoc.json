@@ -1,0 +1,42 @@
+{
+  "$schema": "https://typedoc.org/schema.json",
+  "out": "../../documentation/packages",
+  "json": "./typedoc/data.json",
+  "name": "Packages",
+  "theme": "twind",
+  "plugin": [
+    "typedoc-plugin-markdown",
+    "typedoc-plugin-mdn-links",
+    "typedoc-plugin-resolve-crossmodule-references",
+    "./typedoc/plugin.cjs"
+  ],
+  "includeVersion": false,
+  "readme": "none",
+  "entryPoints": ["../../packages/*"],
+  "entryPointStrategy": "packages",
+  "exclude": ["../../packages/twind"],
+  "includes": "../..",
+  "skipErrorChecking": true,
+  "categorizeByGroup": true,
+  "defaultCategory": "General Use",
+  "categoryOrder": ["General Use", "Advanced Use", "*"],
+  "sort": ["visibility", "static-first", "kind", "alphabetical"],
+  "excludeInternal": true,
+  "visibilityFilters": {
+    "protected": true,
+    "inherited": true,
+    "private": false,
+    "external": false,
+    "@deprecated": false,
+    "@internal": false,
+    "@experimental": false,
+    "@alpha": false,
+    "@beta": true
+  },
+  "githubPages": false,
+  "externalSymbolLinkMappings": {
+    "global": {
+      "URLSearchParams": "https://developer.mozilla.org/en-US/docs/Web/API/URLSearchParams"
+    }
+  }
+}

@@ -1,0 +1,27 @@
+# Cloudflare Headers: https://developers.cloudflare.com/pages/platform/headers
+
+## Immutable assets
+/_app/immutable/*
+  Cache-Control: public, immutable, max-age=31536000
+  X-Robots-Tag: noindex
+
+## Always revalidate service worker
+# https://stackoverflow.com/questions/38843970/service-worker-javascript-update-frequency-every-24-hours
+# cache for 1 hour
+/service-worker.js
+  Cache-Control: public, max-age=3600
+
+## Allow favicon access from everywhere - used by cdn.twind.style
+/favicon.ico
+  Access-Control-Allow-Origin: *
+
+## Prevent *.pages.dev deployments showing in search results
+https://:project.pages.dev/*
+  X-Robots-Tag: noindex
+
+https://:deployment.:project.pages.dev/*
+  X-Robots-Tag: noindex
+
+## Allow cdn access from everywhere
+https://cdn.twind.style/*
+  Access-Control-Allow-Origin: *

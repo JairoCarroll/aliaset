@@ -1,0 +1,60 @@
+{
+  "name": "@twind/with-remix",
+  "version": "1.0.1",
+  "description": "Seamless integration of Twind in a Remix project",
+  "publishConfig": {
+    "access": "public",
+    "directory": "dist",
+    "targets": {
+      "// No browser global build": "",
+      "script": false
+    }
+  },
+  "keywords": [
+    "twind",
+    "twind-with",
+    "tailwind",
+    "tailwindcss",
+    "tw-in-js",
+    "tailwind-in-js",
+    "remix",
+    "remix-run"
+  ],
+  "type": "module",
+  "// The 'module', 'unpkg' and 'types' fields are added by distilt": "",
+  "main": "src/index.ts",
+  "// Each entry is expanded into several bundles (types, esnext, module, script, node, and default)": "",
+  "exports": {
+    ".": "./src/index.ts",
+    "./server": {
+      "node": "./src/server.ts",
+      "module": "./src/server.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "// These are relative from within the dist/ folder": "",
+  "sideEffects": false,
+  "peerDependencies": {
+    "@twind/core": "^1.0.1",
+    "react": "^16.6.0 || 17.x || 18.x",
+    "remix": "1.x",
+    "typescript": "^4.8.4"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@twind/core": "^1.0.1",
+    "@types/node": "^14.18.33",
+    "@types/react": "^17.0.52",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "remix": "^1.7.5",
+    "typescript": "^4.8.4"
+  },
+  "scripts": {
+    "build": "distilt"
+  }
+}

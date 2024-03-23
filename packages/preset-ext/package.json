@@ -1,0 +1,58 @@
+{
+  "name": "@twind/preset-ext",
+  "version": "1.0.1",
+  "description": "extension preset for twind",
+  "keywords": [
+    "twind",
+    "twind-preset",
+    "tailwind",
+    "tailwindcss",
+    "tw-in-js",
+    "tailwind-in-js",
+    "preset"
+  ],
+  "type": "module",
+  "// The 'module', 'unpkg' and 'types' fields are added by distilt": "",
+  "main": "src/index.ts",
+  "// Each entry is expanded into several bundles (types, esnext, module, script, node, and default)": "",
+  "exports": {
+    ".": "./src/index.ts",
+    "./rules": "./src/rules.ts",
+    "./variants": "./src/variants.ts",
+    "./package.json": "./package.json"
+  },
+  "// These are relative from within the dist/ folder": "",
+  "sideEffects": false,
+  "size-limit": [
+    {
+      "name": "@twind/preset-ext",
+      "path": "dist/preset-ext.esnext.js",
+      "brotli": true,
+      "limit": "0.5kb",
+      "ignore": [
+        "twind"
+      ]
+    }
+  ],
+  "peerDependencies": {
+    "@twind/core": "^1.0.1",
+    "typescript": "^4.8.4"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@twind/core": "^1.0.1",
+    "@twind/preset-tailwind": "^1.0.1",
+    "typescript": "^4.8.4"
+  },
+  "scripts": {
+    "build": "distilt"
+  },
+  "publishConfig": {
+    "access": "public",
+    "directory": "dist"
+  }
+}

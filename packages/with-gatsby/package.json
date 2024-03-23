@@ -1,0 +1,72 @@
+{
+  "name": "gatsby-plugin-twind",
+  "version": "1.0.1",
+  "description": "Seamless integration of Twind in a Gatsby project",
+  "keywords": [
+    "twind",
+    "twind-with",
+    "tailwind",
+    "tailwindcss",
+    "tw-in-js",
+    "tailwind-in-js",
+    "svelte",
+    "gatsby",
+    "gatsby-plugin"
+  ],
+  "type": "commonjs",
+  "// The 'module', 'unpkg' and 'types' fields are added by distilt": "",
+  "// Each entry is expanded into several bundles (types, esnext, module, script, node, and default)": "",
+  "exports": {
+    "./gatsby-browser": "./src/gatsby-browser.ts",
+    "./gatsby-node": {
+      "node": "./src/gatsby-node.ts"
+    },
+    "./gatsby-ssr": {
+      "node": "./src/gatsby-ssr.ts"
+    },
+    "./package.json": "./package.json"
+  },
+  "// These are relative from within the dist/ folder": "",
+  "sideEffects": true,
+  "typedoc": {
+    "entryPoint": "./index.d.ts"
+  },
+  "publishConfig": {
+    "access": "public",
+    "directory": "dist",
+    "targets": {
+      "// No browser global build": "",
+      "script": false
+    }
+  },
+  "peerDependencies": {
+    "@twind/core": "^1.0.1",
+    "gatsby": "2.x || 3.x || 4.x",
+    "react": "16.x || 17.x || 18.x",
+    "react-dom": "16.x || 17.x || 18.x"
+  },
+  "peerDependenciesMeta": {
+    "typescript": {
+      "optional": true
+    }
+  },
+  "devDependencies": {
+    "@twind/core": "^1.0.1",
+    "@types/react": "^17.0.52",
+    "@types/react-dom": "^17.0.18",
+    "gatsby": "^4.24.8",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "typescript": "^4.8.4"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "ignoreMissing": [
+        "babel-eslint"
+      ]
+    }
+  },
+  "scripts": {
+    "build": "distilt"
+  }
+}
